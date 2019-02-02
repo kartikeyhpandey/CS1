@@ -11,8 +11,12 @@ using namespace std;
 double factorial(int N) {
    // Please place the factorial of N in the variable return_val
    // so it can be returned to the calling function.
-   double return_val = N;
-// your code goes here
+   double return_val = 1;
+   for(int i=1; i<=N; i++){
+	   return_val*=i;
+   }
+   if(N==0||N==1)
+	   return_val=1;
    return return_val;
 }
 // You can change main() in anyway you want

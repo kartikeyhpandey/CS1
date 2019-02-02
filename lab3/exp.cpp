@@ -13,13 +13,23 @@ using namespace std;
 
 double factorial(int N) {
   // Insert your code here
+  double return_val = 1;
+   for(int i=1; i<=N; i++){
+	   return_val*=i;
+   }
+   if(N==0||N==1)
+	   return_val=1;
+   return return_val;
 }
 
 // A clone of the system exp() function.  
 // Please do not use the system exp() function in the creation of your function.
 double E_to_X(double X) {
-   
-   return 1; // Replace return statement with something more proper
+   double exp=0.0;
+   for(int i=0; i<=30;i++){
+	   exp+=(pow(X,i)/factorial(i));
+   }
+   return exp; // Replace return statement with something more proper
 }
 
 // You can change main() in anyway you want
