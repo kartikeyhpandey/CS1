@@ -5,7 +5,12 @@ using namespace std;
 
 // Please place your "compare delta" function and body right here
 // See google docs for details
-
+bool compareDelta(double a, double b, double d){
+    if(fabs(a-b)<=d)
+        return 1;
+    else 
+        return 0;
+}
 int main() {
 
    /* Type your code here. */
