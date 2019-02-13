@@ -7,7 +7,7 @@ using namespace std;
 
 int rollDie(){
 	return (rand()%6)+1;
-}
+} //rolls Die
 
 bool playOneGame(int point){
 	int rd;
@@ -19,19 +19,19 @@ bool playOneGame(int point){
 		}
 	}
 	return false;
-}
+} //Plays the game once
 
 bool isPointValid(int point){
 	return (point>=1&&point<=6);
-}
+} //Checks for the validity of point
 
 bool isWagValid(int wag, int accbal){
 	return (wag>=0&&wag<=accbal);
-}
+} //Checks for the validity of wager
 
 double winPercentage(int wc, int c){
 	return (wc*100.0)/c;
-}
+} //calculate win percentage
 
 int main(){
 	int accbal=100;
@@ -47,12 +47,6 @@ int main(){
 		cout<<"Enter wager (0 to exit): ";
 		cin>>wag;
 		cout<<endl;
-
-		while(wag>accbal){
-			cout<<"Error: You must wager less than your account balance (type 0 to exit): ";
-			cin>>wag;
-			cout<<endl;
-		}
 
 		while(isWagValid(wag, accbal)==false){
 			cout<<"Error: You must wager between $1 and $"<<accbal<<" (type 0 to exit): ";
@@ -95,6 +89,7 @@ int main(){
 			cout<<"Your final account balance is $"<<accbal<<endl;
 			cout<<"You won "<<wc<<" time out of "<<c<<" for a winning percentage of "<<wp<<"%"<<endl;
 		}
-	}
+		
+	}//while
 
-}
+}//main
