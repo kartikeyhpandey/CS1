@@ -1,4 +1,3 @@
-// Add your information here
 #define _USE_MATH_DEFINES
 
 #include <iostream>
@@ -379,3 +378,4 @@ int main(){
 
     outfile.close();
     infile.close();
+}
